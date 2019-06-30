@@ -1,0 +1,443 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/05c23298b2.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <title>مسابقه نبرد اپلیکیشن ها</title>
+    </head>
+
+    <body>
+        <script>
+            // var prevScrollpos = window.pageYOffset;
+            // window.onscroll = function () {
+            //     var currentScrollPos = window.pageYOffset;
+            //     if (currentScrollPos > prevScrollpos + 100) {
+            //         document.getElementById("navbar").style.backgroundColor = "rgb(15, 102, 233)";
+            //     }
+            //     else {
+            //         document.getElementById("navbar").style.backgroundColor = "rgba(255, 255, 255,0)";
+            //     }
+            // }
+
+            $(document).ready(function () {
+                $("a").on('click', function (event) {
+                    if (this.hash !== "") {
+
+                        event.preventDefault();
+                        var hash = this.hash;
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 800, function () {
+                            window.location.hash = hash;
+                        });
+                    }
+                });
+            });
+        </script>
+
+        <!-- Navbar -->
+        <nav class="navigation">
+            <div id="menuToggle">
+                <!--
+            A fake / hidden checkbox is used as click reciever,
+            so you can use the :checked selector on it.
+            -->
+                <input type="checkbox" />
+
+                <!--
+            Some spans to act as a hamburger.
+            
+            They are acting like a real hamburger,
+            not that McDonalds stuff.
+            -->
+                <span style="margin-top: 9px;"></span>
+                <span></span>
+                <span></span>
+
+                <!--
+            Too bad the menu has to be inside of the button
+            but hey, it's pure CSS magic.
+            -->
+                <ul id="menu">
+                    <li><a href="#contact-us">ارتباط با ما</a></li>
+                    <li><a href="#download">حامیان</a></li>
+                    <li><a href="#timetable">زمان بندی و ثبت نام</a></li>
+                    <li><a href="#summary">توضیحات مسابقه</a></li>
+                    <li><a href="#services">کمیته علمی و اجرایی</a></li>
+                    <li><a href="#section-info">معرفی</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav id="navbar">
+            <div class="container">
+                <a href="#header" id="nav-brand">مسابقه نبرد اپلیکیشن ها</a>
+                <button><i class="fas fa-bars"></i></button>
+                <ul>
+                    <li><a href="#contact-us">ارتباط با ما</a></li>
+                    <li><a href="#download">حامیان</a></li>
+                    <li><a href="#timetable">زمان بندی و ثبت نام</a></li>
+                    <li><a href="#summary">توضیحات مسابقه</a></li>
+                    <li><a href="#services">کمیته علمی و اجرایی</a></li>
+                    <li><a href="#section-info">معرفی</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="clear-fix"></div>
+
+        <!-- Header -->
+        <header id="header">
+            <div class="container">
+                <div class="row">
+                    <img src="{% static 'img/nabardlogo.png' %}" alt="مسابقه نبرد اپلیکیشن ها">
+                    <h1 class="heading-1">دومین دوره از مسابقات نبرد اپلیکیشن ها</h1>
+                    <!-- <span class="underline"></span>
+                    <p class="heading-p">
+                        برای دریافت اطلاعات مسابقه به لینک زیر مراجعه کنید
+                    </p> -->
+                    <a href="#section-info" id="heading-link"><i class="fas fa-arrow-circle-down"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Information -->
+        <section id="section-info">
+            <div class="container" style="text-align: center;">
+                <h2>درباره مسابقه</h2>
+                <span class="underline" style="margin-top: 0;"></span>
+                <div class="row">
+                    <img src="img/poster.jpg" alt="نبرد اپلیکیشن ها">
+                    <!-- <span class="underline"></span> -->
+                    <p id="info-p" dir="rtl">
+                        دانشکده مهندسی کامپیوتر دانشگاه اصفهان، میزبان برگزاری دومین دوره از مسابقات ملی نبرد اپلیکیشن
+                        ها در 24 مهرماه 98
+                        می‌باشد.
+                        <a href="http://ui.ac.ir/Dorsapax/userfiles/Sub108/comp/app-ui.pdf">اولین دوره از مسابقات نبرد
+                            اپلیکیشن ها</a> در آبان 1393 در دانشگاه اصفهان برگزار
+                        گردید و مورد
+                        استقبال زیاد شرکت کنندگان قرار
+                        گرفت. در این دوره از مسابقات، توانایی شرکت کنندگان در کارآفرینی، حل مشکلات و استفاده از فرصت ها
+                        به چالش کشیده می شود. در
+                        این مسابقه لازم است شرکت کنندگان ابتدا ایده پردازی کرده و سپس ایده های خود را در قالب اپلیکیشن
+                        های موبایل یا وب پیاده
+                        سازی کنند.
+                        اپلیکیشن های ارسال شده توسط کمیته علمی ارزیابی خواهد شد و تیم های برتر برای ارائه حضوری در روز
+                        مسابقه دعوت خواهند شد.
+                        سپس در روز مسابقه سه تیم برگزیده انتخاب شده و مورد تقدیر قرار خواهند گرفت. تیم های برگزیده از
+                        جوایز ارزنده و همچنین
+                        حمایت شتاب دهنده هاب برخوردار خواهند شد .
+                        تیم ارزیابی شامل اعضای کمیته علمی مسابقه و نمایندگان شرکت شتاب دهنده هاب می باشد. در این مسابقه
+                        به ایده کسب و کار، پیاده
+                        سازی و تکنولوژی های استفاده شده امتیاز داده می شود.
+                    </p>
+                    <!-- <a href="#" id="info-link">GET STARTED!</a> -->
+                </div>
+            </div>
+        </section>
+        <div class="clear-fix"></div>
+
+        <!-- staff -->
+        <section id="services">
+            <div class="container">
+                <div class="row">
+                    <h2>اعضای کمیته علمی</h2>
+                    <h1>( به ترتیب حروف الفبا )</h1>
+                    <span class="underline"></span>
+                    <div class="service-items">
+                        <div class="item">
+                            <a href="http://eng.ui.ac.ir/~ladani"><img src="{% static 'img/photos/ladani2.jpg' %}" alt=""
+                                    style="margin: 0 25%;"></a>
+                            <h3>دکتر بهروز ترک لادانی</h3>
+                            <p>دانشگاه اصفهان</p>
+                        </div>
+                        <div class="item">
+                            <a href="https://ece.iut.ac.ir/user/2716"><img src="{% static 'img/photos/basiri.jpg' %}" alt=""
+                                    style="margin: 0 15%;"></a>
+                            <h3>دکتر علیرضا بصیری</h3>
+                            <p>دانشگاه صنعتی اصفهان</p>
+                        </div>
+                        <div class="item">
+                            <a href="http://eng.ui.ac.ir/~ahmadb"><img src="{% static 'img/photos/baraani2.jpg' %}" alt=""
+                                    style="margin: 0 20%;"></a>
+                            <h3>دکتر احمد براآنی</h3>
+                            <p>دانشگاه اصفهان</p>
+                        </div>
+                        <div class="item">
+                            <a href="https://isfahanhub.com/"><img src="{% static 'img/photos/akochekiyan.jpg' %}" alt=""
+                                    style="margin: 0 21%;"></a>
+                            <h3>دکتر محمد آکوچکیان</h3>
+                            <p>شرکت هوشمند اول برنای اصفهان</p>
+                        </div>
+                        <div class="item">
+                            <a href="http://eng.ui.ac.ir/~a_fatemi"><img src="{% static 'img/photos/fatemi.jpg' %}" alt=""
+                                    style="margin: 0 20%;"></a>
+                            <h3>دکتر افسانه فاطمی</h3>
+                            <p>دانشگاه اصفهان</p>
+                        </div>
+                        <div class="item">
+                            <a href="http://eng.ui.ac.ir/~shahgholi"><img src="{% static 'img/photos/shahgholi.jpg' %}" alt=""
+                                    style="margin: 0 20%;"></a>
+                            <h3>دکتر بهروز شاهقلی</h3>
+                            <p>دانشگاه اصفهان</p>
+                        </div>
+                        <div class="item">
+                            <a href="http://eng.ui.ac.ir/~r.ramezani"><img src="{% static 'img/photos/ramezani.jpg' %}" alt=""
+                                    style="margin: 0 19%;"></a>
+                            <h3>دکتر رضا رمضانی</h3>
+                            <p>دانشگاه اصفهان</p>
+                        </div>
+                        <div class="item">
+                            <a href="https://www.linkedin.com/in/marzieh-jalal-abadi?originalSubdomain=ca"><img
+                                    src="{% static 'img/photos/jalal.png' %}" alt="" style="margin: 0 19%;"></a>
+                            <h3>دکتر مرضیه جلال آبادی</h3>
+                            <p>دانشگاه شریف</p>
+                        </div>
+                    </div>
+                    <div class="service-items-2">
+                        <div class="item">
+                            <a href="http://eng.ui.ac.ir/~n.moghim"><img src="{% static 'img/photos/moghim.jpg' %}" alt=""
+                                    style="margin: 0 29%;"></a>
+                            <h3>دکتر ندا مقیم</h3>
+                            <p>دانشگاه اصفهان</p>
+                        </div>
+                        <div class="item">
+                            <a href="https://www.sku.ac.ir/~karimi"><img src="{% static 'img/photos/karimi2.jpg' %}" alt=""
+                                    style="margin: 0 28%;"></a>
+                            <h3>دکتر زهرا کریمی</h3>
+                            <p>دانشگاه شهرکرد</p>
+                        </div>
+                        <div class="item">
+                            <a href="http://depeng.uk.ac.ir/~mghazvini"><img src="{% static 'img/photos/ghazvini.jpg' %}" alt=""
+                                    style="margin: 0 26%;"></a>
+                            <h3>دکتر مهدیه قزوینی کر</h3>
+                            <p>دانشگاه شهید باهنر کرمان</p>
+                        </div>
+                    </div>
+                    <div class="service-items-4">
+                        <div class="item">
+                            <a href="http://eng.ui.ac.ir/~nematbakhsh"><img src="{% static 'img/photos/nematbakhsh2.jpg' %}" alt=""
+                                    style="margin: 0 32%;"></a>
+                            <h3>دکتر محمدعلی نعمت بخش</h3>
+                            <p>دانشگاه اصفهان</p>
+                        </div>
+                        <div class="item">
+                            <a href="http://eng.ui.ac.ir/~m.mahdavi"><img src="{% static 'img/photos/mahdavi.jpg' %}" alt=""
+                                    style="margin: 0 36%;"></a>
+                            <h3>دکتر مجتبی مهدوی</h3>
+                            <p>دانشگاه اصفهان</p>
+                        </div>
+                    </div>
+                    <h2>تیم اجرایی</h2>
+                    <span class="underline"></span>
+                    <div class="service-items-3">
+                        <div class="item">
+                            <a href="http://eng.ui.ac.ir/~kaedi"><img src="{% static 'img/photos/kaedi2.jpg' %}" alt=""
+                                    style="margin: 0 35%;"></a>
+                            <h3>دکتر مرجان کائدی</h3>
+                            <p>دبیر مسابقه <br>دانشگاه اصفهان</p>
+                        </div>
+                        <div class="item">
+                            <a href="http://eng.ui.ac.ir/~sh.rahimi"><img src="{% static 'img/photos/shekoufeh2.jpg' %}" alt=""
+                                    style="margin: 0 37%;"></a>
+                            <h3>دکتر شکوفه کلاهدوز رحیمی</h3>
+                            <p>دبیر مسابقه</p>
+                            <p>دانشگاه اصفهان</p>
+                        </div>
+                    </div>
+                    <div class="service-items-1">
+                        <div class="item">
+                            <img src="{% static 'img/photos/seyed2.jpg' %}" alt="" style="margin: 0 19%;">
+                            <h3>سید محمدرضا رضوی</h3>
+                            <p>مسئول امور اجرایی</p>
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'img/photos/ghojavand2.jpg' %}" alt="" style="margin: 0 20%;">
+                            <h3>حسین قجاوند</h3>
+                            <p>مسئول امور اجرایی</p>
+                        </div>
+                        <div class="item">
+                            <a href="http://rezapazan.cvbuilder.me"><img src="{% static 'img/photos/pazan.jpg' %}" alt=""
+                                    style="margin: 0 20%;"></a>
+                            <h3>رضا پازن</h3>
+                            <p>مسئول امور اجرایی</p>
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'img/photos/jahanbin2.jpg' %}" alt="" style="margin: 0 21%;">
+                            <h3>امیر جهان بین</h3>
+                            <p>مسئول امور اجرایی</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="clear-fix"></div>
+
+        <!-- summary -->
+        <section id="summary">
+            <div class="container">
+                <div class="row">
+                    <h2>توضیحات مسابقه</h2>
+                    <span class="underline"></span>
+                    <p dir="rtl">شرکت کنندگان در این مسابقه ابتدا باید ایده ای برای کسب و کار و درآمدزایی ارائه دهند و
+                        سپس آن رادر
+                        قالب یک اپلیکیشن مبایل
+                        یا وب پیاده سازی کنند.
+                        تعداد اعضا هر تیم بین 1 تا 5 نفر می باشد. هر تیم می تواند حداکثر 3 اپلیکیشن ارسال کند. همچنین
+                        حضور شرکت کنندگان در بیش
+                        از یک تیم بلامانع است.
+                        تیم های شرکت کننده باید موارد زیر را از طریق لینک ثبت نام ارسال کنند.
+                    </p>
+                    <table>
+                        <tr>
+                            <th>توضیحات</th>
+                            <th>مورد</th>
+                        </tr>
+                        <tr>
+                            <td>نمونه اولیه از اپلیکیشن کافی است و لزومی به ارائه اپلیکیشن نهایی نیست</td>
+                            <td>اپلیکیشن طراحی شده توسط تیم</td>
+                        </tr>
+                        <tr>
+                            <td><a href="{% static 'NabardTemplate.pptx' %}" style="margin-right: 20px;">نمونه
+                                    ارائه شده</a><a href="{% static 'Nabard.pptx' %}">دانلود فرمت
+                                    پاورپوینت</a></td>
+                            <td>فایل پاورپوینت ارائه</td>
+                        </tr>
+                    </table>
+                    <p dir="rtl" style="font-size: 0.9rem;">*
+                        درمورد طرح ارائه شده
+                        مدتی از ارائه این اپلیکیشن گذشته، در حال حاضر تجاری شده و وارد بازار شده است. ولی طرح های
+                        دانشجویان نیاز نیست به این
+                        مرحله رسیده باشد.
+                        می توانید کلا رنگ و تمپلیت را هم به سلیقه خودتان عوض کنید
+                        *
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Time plan -->
+        <section id="timetable">
+            <div class="container">
+                <div class="row">
+                    <h2>زمان بندی مسابقه</h2>
+                    <table>
+                        <tr>
+                            <th>هزینه</th>
+                            <th>خاتمه</th>
+                            <th>شروع</th>
+                            <th>ثبت نام</th>
+                        </tr>
+                        <tr>
+                            <td>پنجاه هزار تومان</td>
+                            <td>98/06/31</td>
+                            <td>98/04/01</td>
+                            <td>همراه با تخفیف</td>
+                        </tr>
+                        <tr>
+                            <td>یکصد و پنجاه هزار تومان</td>
+                            <td>98/07/15</td>
+                            <td>98/07/01</td>
+                            <td>بدون تخفیف</td>
+                        </tr>
+                    </table>
+                    <p>برگزاری مسابقه: 24 مهر ماه</p>
+                    <a href="{% url 'nabard:team_register' %}" id="signup-link">ثبت نام</a>
+                </div>
+                <span class="underline" style="width: 70%; margin-left: 15%; margin-top: 50px;"></span>
+                <div class="workshops">
+                    <h2>کارگاه های مرتبط</h2>
+                    <a href="http://shekoufehrahimi.com/UINabard/site/images/nabard1.jpg">دومین دوره کارگاه خلق
+                        اپلیکیشن و درآمدزایی</a>
+                    <a href="http://shekoufehrahimi.com/UINabard/site/images/nabard2.jpg"
+                        style="margin-left: 100px;">اولین دوره کارگاه خلق اپلیکیشن
+                        و درآمدزایی</a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sponsers -->
+        <section id="download">
+            <div class="container">
+                <div class="row">
+                    <h2>حامیان مسابقه</h2>
+                    <!-- <a href="#" id="download-link">Download Now!</a> -->
+                    <div class="download-items">
+                        <div class="item">
+                            <a href="http://comp.ui.ac.ir/"><img src="{% static 'img/uni.png' %}" alt=""></a>
+                            <p>دانشکده مهندسی کامپیوتر</p>
+                        </div>
+                        <div class="item">
+                            <a href="https://isfahanhub.com/"><img src="{% static 'img/hub2.png' %}" alt=""></a>
+                            <p dir="rtl">شرکت هوشمند اول برنای اصفهان (هاب)</p>
+                        </div>
+                        <div class="item">
+                            <a href="http://sace.ui.ac.ir/"><img src="{% static 'img/anj2.png' %}" alt=""></a>
+                            <p>انجمن علمی مهندسی کامپیوتر دانشگاه اصفهان</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <h2>راه های ارتباط با ما</h2>
+                    <span class="underline"></span>
+                    <!-- <p>
+                        Ready to start your next project with us? Give us a call or send us an email and we will get
+                        back to you as soon as possible!
+                    </p> -->
+                    <ul>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <p>031-37934521<br>031-37935641</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <p>kaedi@eng.ui.ac.ir<br>sh.rahimi@eng.ui.ac.ir</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marked-alt"></i>
+                            <p>اصفهان، میدان آزادی، خیابان دانشگاه، دانشکده مهندسی کامپیوتر</p>
+                        </li>
+                        <li>
+                            <i class="fab fa-telegram" style="padding-bottom: 20px"></i>
+                            <p>@shekoufehrahimi</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact-us">
+            <div class="container">
+                <p>
+                    Copyright &copy; 2019 - <a href="http://rezapazan.cvbuilder.me">Reza Pazan</a>
+                </p>
+            </div>
+        </footer>
+        <script>
+            let btn_menu = document.querySelector('.fa-bars')
+            let menu = document.querySelector('nav ul')
+            btn_menu.addEventListener('click', () => {
+                if (menu.style.display === "block") {
+                    menu.style.display = "none";
+                } else {
+                    menu.style.display = "block";
+                }
+            })
+        </script>
+    </body>
+
+</html>

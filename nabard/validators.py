@@ -1,4 +1,5 @@
 def validate_powerpoint_file(value):
+    print(value)
     import os
     from django.core.exceptions import ValidationError
 
@@ -9,6 +10,7 @@ def validate_powerpoint_file(value):
 
 
 def validate_archived_file(value):
+    print(value)
     import os
     from django.core.exceptions import ValidationError
 

@@ -8,3 +8,4 @@ class TeamRegistrationForm(forms.ModelForm):
     class Meta:
         model = Team
         fields = '__all__'
+
