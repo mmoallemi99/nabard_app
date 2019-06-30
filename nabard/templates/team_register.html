@@ -12,44 +12,44 @@
 </head>
 
 <body>
-
-
-{#	{{ team_form.as_p }}#}
-
-{#</form>#}
 <div class="container">
 	<div class="row">
 		<h2>فرم ثبت نام</h2>
 		<span class="underline"></span>
 	</div>
 	<form action="{% url 'nabard:team_register' %}" method="POST" enctype="multipart/form-data">
-		{#		<div class="form-group">#}
-		{#			<label for="user-1" dir="rtl">عضو شماره 1:</label>#}
-		{#			<input type="text" id="user-1" name="user-1" placeholder="لطفا نام خود را وارد کنید" dir="rtl">#}
-		{#		</div>#}
-
+		{{ members_formset.management_form }}
 		{% for form in members_formset.forms %}
 			<div class="form-group">
-				<label for="{{ form.full_name.id_for_label }}" dir="rtl">عضو شماره 1:</label>
+				<label for="{{ form.full_name.id_for_label }}" dir="rtl">عضو شماره {{ forloop.counter }}:</label>
 				{{ form.full_name }}
 				{{ form.full_name.errors }}
 			</div>
 		{% endfor %}
-
 		<div class="form-group">
-			<label for="subject" dir="rtl">عنوان طرح:</label>
-			<input type="text" id="subject" name="subject" placeholder="لطفا عنوان طرح خود را وارد کنید"
-			       dir="rtl">
+			<label for="{{ team_form.app_title.id_for_label }}" dir="rtl">عنوان طرح :</label>
+			{{ team_form.app_title }}
+			{{ team_form.app_title.errors }}
+		</div>
+
+		{% csrf_token %}
+		<div class="submits">
+			<label for="{{ team_form.app_file.id_for_label }}" dir="rtl">
+				فایل اپلیکیشن خود را در قالب zip پیوست کنید:
+				<i class="fas fa-file-upload"></i>
+			</label>
+			{{ team_form.app_file }}
+			{{ team_form.app_file.errors }}
+
+			<label for="{{ team_form.powerpoint_file.id_for_label }}" dir="rtl">
+				فایل ارائه را پیوست کنید:
+				<i class="fas fa-file-upload"></i>
+			</label>
+			{{ team_form.powerpoint_file }}
+			{{ team_form.powerpoint_file.errors }}
 		</div>
 		<div class="submits">
-			{% csrf_token %}
 			<input type="submit" value="ارسال">
-			<input type="file" id="power-point" name="power-point">
-			<label for="power-point" dir="rtl">فایل ارائه را پیوست کنید:<i
-					class="fas fa-file-upload"></i></label>
-			<input type="file" id="zip" name="zip">
-			<label for="zip" dir="rtl">فایل اپلیکیشن خود را در قالب zip پیوست کنید:<i
-					class="fas fa-file-upload"></i></label>
 		</div>
 	</form>
 	<p dir="rtl" style="margin-top:40px;">*جهت ارسال فایل های خود روی دکمه های آبی رنگ به شکل فایل کلیک کنید*
