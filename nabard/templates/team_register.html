@@ -1,15 +1,64 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-	<title>Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://kit.fontawesome.com/05c23298b2.js"></script>
+	<link rel="stylesheet" href="{% static 'css/form.css' %}">
+	<title>فرم ثبت نام</title>
 </head>
+
 <body>
-<form action="{% url 'nabard:team_register' %}" method="POST" enctype="multipart/form-data">
-	{{ members_formset.as_p }}
-	{{ team_form.as_p }}
-	{% csrf_token %}
-	<button type="submit" value="ارسال">ارسال</button>
-</form>
+
+
+{#	{{ team_form.as_p }}#}
+
+{#</form>#}
+<div class="container">
+	<div class="row">
+		<h2>فرم ثبت نام</h2>
+		<span class="underline"></span>
+	</div>
+	<form action="{% url 'nabard:team_register' %}" method="POST" enctype="multipart/form-data">
+		{#		<div class="form-group">#}
+		{#			<label for="user-1" dir="rtl">عضو شماره 1:</label>#}
+		{#			<input type="text" id="user-1" name="user-1" placeholder="لطفا نام خود را وارد کنید" dir="rtl">#}
+		{#		</div>#}
+
+		{% for form in members_formset.forms %}
+			<div class="form-group">
+				<label for="{{ form.full_name.id_for_label }}" dir="rtl">عضو شماره 1:</label>
+				{{ form.full_name }}
+				{{ form.full_name.errors }}
+			</div>
+		{% endfor %}
+
+		<div class="form-group">
+			<label for="subject" dir="rtl">عنوان طرح:</label>
+			<input type="text" id="subject" name="subject" placeholder="لطفا عنوان طرح خود را وارد کنید"
+			       dir="rtl">
+		</div>
+		<div class="submits">
+			{% csrf_token %}
+			<input type="submit" value="ارسال">
+			<input type="file" id="power-point" name="power-point">
+			<label for="power-point" dir="rtl">فایل ارائه را پیوست کنید:<i
+					class="fas fa-file-upload"></i></label>
+			<input type="file" id="zip" name="zip">
+			<label for="zip" dir="rtl">فایل اپلیکیشن خود را در قالب zip پیوست کنید:<i
+					class="fas fa-file-upload"></i></label>
+		</div>
+	</form>
+	<p dir="rtl" style="margin-top:40px;">*جهت ارسال فایل های خود روی دکمه های آبی رنگ به شکل فایل کلیک کنید*
+	</p>
+	<p id="notification" dir="rtl">
+		اپلیکیشن های ارسال شده توسط کمیته علمی ارزیابی خواهد شد و تیم های برتر برای ثبت نام و ارائه حضوری در روز
+		مسابقه دعوت
+		خواهند شد.
+	</p>
+</div>
 </body>
 </html>

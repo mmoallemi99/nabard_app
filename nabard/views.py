@@ -1,12 +1,7 @@
 from django.shortcuts import render
-from django.forms import inlineformset_factory
-
 from django.http.response import HttpResponse
 
-from .models import Team,\
-    TeamMember
-
-from .forms import TeamRegistrationForm
+from .forms import TeamRegistrationForm, MembersFormSet
 
 
 def index(request):
@@ -16,8 +11,6 @@ def index(request):
 
 
 def team_register(request):
-
-    MembersFormSet = inlineformset_factory(Team,  TeamMember, fields='__all__', extra=5)
 
     if request.method == 'POST':
         team_form = TeamRegistrationForm(request.POST, request.FILES)
