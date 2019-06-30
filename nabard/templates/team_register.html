@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<form action="{% url 'nabard:team_register' %}" method="POST" enctype="multipart/form-data">
+	{{ members_formset.as_p }}
+	{{ team_form.as_p }}
+	{% csrf_token %}
+	<button type="submit" value="ارسال">ارسال</button>
+</form>
+</body>
+</html>
