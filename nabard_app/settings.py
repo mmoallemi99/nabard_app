@@ -25,7 +25,7 @@ SECRET_KEY = 'w@6-!+=y&v_-ij8z1ex=r1o%^a0h)au0ew4yrplllqk0^8p9$l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['94.184.89.123']
 
 
 # Application definition
@@ -76,10 +76,11 @@ WSGI_APPLICATION = 'nabard_app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'nabard',
         'USER': 'nabard',
-        'PASSWORD': '1234',
+        'PASSWORD': '5ec|_|rePa$$',
+	'HOST': 'localhost',
         'PORT': 5432,
     }
 }
