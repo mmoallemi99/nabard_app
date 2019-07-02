@@ -1,0 +1,689 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.underline {
+    display: inline-block;
+    width: 50px;
+    border: 2px solid #0f66e9;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+body {
+    background-color: #f2f3f4;
+}
+
+/* navbar */
+
+nav {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0f66e9;
+    transition: all 0.4s;
+    z-index: 900;
+}
+
+nav#navbar {
+    display: flex;
+}
+
+nav #nav-brand {
+    box-sizing: border-box;
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.35rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: rgba(255, 255, 255);
+    padding-bottom: .3125rem;
+    cursor: pointer;
+}
+
+nav button {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    text-align: left;
+    box-sizing: border-box;
+    margin-right: 20px;
+}
+
+nav ul li {
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+nav ul li:nth-child(6) {
+    margin-right: 280px;
+}
+
+nav ul li a {
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    max-height: 100vh;
+    background: linear-gradient(rgb(15, 102, 233, 0.3), rgb(15, 102, 233, 0.3)), url(../img/webback2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-position: center center;
+}
+
+header .row {
+    padding: 100px 100px;
+    box-sizing: border-box;
+}
+
+header img {
+    display: block;
+    width: 100;
+    margin: auto;
+}
+
+header h1 {
+    color: white;
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    font-size: 3.7rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    margin-top: 20px;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+}
+
+header h1::after {
+    box-sizing: border-box;
+}
+
+header h1::before {
+    box-sizing: border-box;
+}
+
+header p {
+    color: rgba(255, 255, 255, 0.75);
+    font-family: 'Merriweather', serif;
+    font-weight: 300!important;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    padding: 0 180px;
+}
+
+header #heading-link {
+    display: inline-block;
+    padding: 1.25rem 2.25rem;
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 50px;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+header #heading-link:hover {
+    color: #e2005a;
+}
+
+/* Info Section */
+
+section#section-info {
+    width: 100%;
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 90px;
+}
+
+section#section-info .row {
+    text-align: center;
+    display: flex;
+}
+
+section#section-info h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+
+section#section-info .info-image {
+    margin-top: 20px;
+}
+
+section#section-info p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: black;
+    padding-right: 8%;
+    margin-top: 50px;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+section#section-info a {
+    display: inline-block;
+    /* margin: 30px 0; */
+    text-decoration: none;
+    /* font-family: 'Merriweather Sans', sans-serif; */
+    /* font-size: 0.85rem; */
+    /* font-weight: 700; */
+    /* padding: 25px 45px; */
+    /* background-color: #f8f9fa; */
+    color: #e2005a;
+    /* border-radius: 50px; */
+}
+
+section#section-info a:hover {
+    background-color: #e2e6ea;
+}
+
+/* Services Section */
+
+section#services {
+    background-color: #f2f3f4;
+}
+
+section#services .service-items-3::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+section#services .service-items {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+section#services .row {
+    width: 100%;
+    padding: 100px 0;
+    text-align: center;
+}
+
+section#services h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+section#services h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+section#services .service-items {
+    width: 100%;
+}
+
+section#services .service-items .item {
+    float: left;
+    width: 25%;
+    padding: 30px 10px;
+    box-sizing: border-box;
+}
+
+section#services .service-items-2 .item {
+    float: left;
+    width: 33.33%;
+    padding: 30px 10px;
+    box-sizing: border-box;
+}
+
+section#services .service-items-2 img {
+    display: block;
+    position: relative;
+    margin: 0 42%;
+    border-radius: 50px;
+}
+
+section#services .service-items-3 img {
+    display: block;
+    position: relative;
+    margin: 0 42%;
+    border-radius: 50px;
+}
+
+section#services .service-items-1:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+section#services .service-items-1 .item {
+    float: left;
+    width: 25%;
+    padding: 30px 10px;
+    box-sizing: border-box;
+}
+
+section#services .service-items-1 img {
+    display: block;
+    position: relative;
+    margin: 0 42%;
+    border-radius: 50px;
+}
+
+section#services .service-items-4 img {
+    display: block;
+    position: relative;
+    margin: 0 42%;
+    border-radius: 50px;
+}
+
+section#services .service-items-3 .item {
+    float: left;
+    width: 50%;
+    padding: 30px 10px;
+    box-sizing: border-box;
+}
+
+section#services .service-items-4 .item {
+    float: left;
+    width: 50%;
+    padding: 30px 10px;
+    box-sizing: border-box;
+}
+
+section#services .service-items-3 {
+    margin-bottom: 50px;
+}
+
+.service-items-2 {
+    margin-bottom: 20px;
+}
+
+.service-items::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.service-items-4 {
+    margin-bottom: 70px;
+}
+
+.service-items-4::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.service-items-2::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+section#services .service-items img {
+    display: block;
+    position: relative;
+    margin: 0 35%;
+    border-radius: 50px;
+}
+
+section#services .item h3 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+section#services .item p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75;
+    padding: 0 15px;
+}
+
+/* summary */
+
+section#summary {
+    width: 100%;
+    background-color: #052143;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+section#summary .row {
+    width: 100%;
+    padding: 90px 0;
+}
+
+section#summary h2 {
+    font-size: 2.5rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+section#summary p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.75;
+    padding: 0 90px;
+}
+
+section#summary table {
+    width: 100%;
+    margin-top: 50px;
+}
+
+section#summary table th, #summary table td {
+    border: 2px solid white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+section#summary table a {
+    display: inline-block;
+    padding: 1.25rem 2.25rem;
+    background-color: #0f66e9;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 10rem;
+    word-spacing: 1px;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.5;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+/* time section */
+
+section#timetable {
+    width: 100%;
+    background-color: white;
+    padding: 90px 0;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section#timetable .row {
+    text-align: center;
+}
+
+section#timetable .row p {
+    margin-top: 50px;
+    font-size: 1.5rem;
+}
+
+section#timetable table {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+}
+
+section#timetable table th, #timetable table td {
+    border: 2px solid black;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+section#timetable tr:nth-child(odd) {
+    background-color: #dddddd;
+}
+
+section#timetable h2 {
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+section#timetable a {
+    display: inline-block;
+    padding: 1.25rem 2.25rem;
+    background-color: #0f66e9;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 10rem;
+    margin-top: 50px;
+    word-spacing: 1px;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.5;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+section#timetable a:hover {
+    background-color: #e2005a;
+}
+
+section#timetable .workshops {
+    text-align: center;
+}
+
+section#timetable .workshops h2 {
+    margin-top: 50px;
+}
+
+/* sponsors section */
+
+section#sponsors .container .sponsors-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+section#sponsors {
+    width: 100%;
+    background-color: #ff0066;
+    padding-bottom: 90px;
+    padding-top: 100px;
+    color: white;
+}
+
+section#sponsors p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section#sponsors .row {
+    text-align: center;
+}
+
+section#sponsors h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: white;
+    margin-bottom: 50px;
+}
+
+/* contact section */
+
+section#contact {
+    width: 100%;
+    background-color: white;
+}
+
+section#contact .title {
+    text-align: center;
+}
+
+section#contact .row {
+    padding: 150px 0;
+}
+
+section#contact .contact-items ul {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+section#contact h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+section#contact p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #6c757d;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0 290px;
+}
+
+section#contact ul {
+    list-style: none;
+    padding-top: 50px;
+}
+
+section#contact ul p {
+    padding: 0;
+    margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+section#contact ul i {
+    color: #6c757d;
+    font-size: 3rem;
+}
+
+/* footer section */
+
+footer {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    text-align: center;
+}
+
+footer p {
+    font-family: 'Merriweather', serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #6c757d;
+}
+
+footer a {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #6c757d;
+    text-decoration: none;
+}
+
+/* media queries */
+
+/* Large devices (desktops, less than 1200px) */
+
+@media (max-width: 1199.98px) {}
+
+/* Medium devices (tablets, less than 992px) */
+
+@media (max-width: 991.98px) {}
+
+/* Small devices (landscape phones, less than 768px) */
+
+@media (max-width: 767.98px) {}
+
+/* Extra small devices (portrait phones, less than 576px) */
+
+@media (max-width: 575.98px) {
+    /* Navbar */
+    nav#navbar {
+        display: none;
+    }
+    /* Header */
+    header .row {
+        padding: 0;
+        padding-top: 50px;
+    }
+    header img {
+        width: 100%;
+    }
+    header h1 {
+        font-size: 24px;
+    }
+    header #heading-link {
+        font-size: 40px;
+        margin-top: 0;
+    }
+    /* Info */
+    section#section-info h2 {
+        font-size: 30px;
+    }
+    section#section-info .row {
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+    section#section-info p {
+        font-size: 24px;
+    }
+    section#section-info .info-image img {
+        width: 100%;
+    }
+    /* Sponsors */
+    section#sponsors .container .sponsors-items {
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+    section#sponsors .container .sponsors-items .item {
+        margin-top: 50px;
+    }
+    /* Contact */
+    section#contact h2 {
+        font-size: 30px;
+    }
+    section#contact .contact-items ul {
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+/* Extra large devices (large desktops) */
+
+/* No media query since the extra-large breakpoint has no upper bound on its width */

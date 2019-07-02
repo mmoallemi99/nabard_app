@@ -35,6 +35,14 @@
 		{% csrf_token %}
 		<div class="submits">
 			<input type="submit" value="ارسال">
+
+			<label for="{{ team_form.powerpoint_file.id_for_label }}" dir="rtl">
+				فایل ارائه را در قالب pptx پیوست کنید:
+				<i class="fas fa-file-upload"></i>
+			</label>
+			{{ team_form.powerpoint_file }}
+			{{ team_form.powerpoint_file.errors }}
+
 			<label for="{{ team_form.app_file.id_for_label }}" dir="rtl">
 				فایل اپلیکیشن خود را در قالب zip پیوست کنید:
 				<i class="fas fa-file-upload"></i>
@@ -42,12 +50,7 @@
 			{{ team_form.app_file }}
 			{{ team_form.app_file.errors }}
 
-			<label for="{{ team_form.powerpoint_file.id_for_label }}" dir="rtl">
-				فایل ارائه را پیوست کنید:
-				<i class="fas fa-file-upload"></i>
-			</label>
-			{{ team_form.powerpoint_file }}
-			{{ team_form.powerpoint_file.errors }}
+
 		</div>
 	</form>
 	<h1>: توجه</h1>

@@ -1,0 +1,190 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f2f3f4;
+    color: #555;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.container p#notification {
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+.underline {
+    display: inline-block;
+    width: 70px;
+    border: 2px solid #0f66e9;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.row {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.row h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.form-group input:focus {
+    outline: none;
+}
+
+.form-group label {
+    padding-right: 10px;
+    font-weight: 700;
+}
+
+.submits {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.submits label {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.submits i {
+    padding: 0 2.25rem;
+    color: #0f66e9;
+    font-size: 2rem;
+    font-weight: 700;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    align-self: flex-end;
+    padding: 15px 45px;
+    background-color: #0f66e9;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 10rem;
+    word-spacing: 1px;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.5;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 30px 0;
+}
+
+input[type='file'] {
+    display: none;
+}
+
+input[type="text"] {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type="text"]::placeholder {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
+}
+
+/* footer section */
+
+footer {
+    background-color: #f8f9fa;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer p {
+    font-family: 'Merriweather', serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #6c757d;
+}
+
+footer a {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #6c757d;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+/* media queries */
+
+/* Large devices (desktops, less than 1200px) */
+
+@media (max-width: 1199.98px) {}
+
+/* Medium devices (tablets, less than 992px) */
+
+@media (max-width: 991.98px) {}
+
+/* Small devices (landscape phones, less than 768px) */
+
+@media (max-width: 767.98px) {}
+
+/* Extra small devices (portrait phones, less than 576px) */
+
+@media (max-width: 575.98px) {
+    body {
+        text-align: center;
+    }
+    .row {
+        text-align: center;
+    }
+    footer {
+        padding: 30px 0;
+    }
+    input[type="text"]::placeholder {
+        text-align: center;
+    }
+    input[type="submit"] {
+        align-self: center;
+    }
+    .submits label {
+        font-size: 1rem;
+        text-align: right;
+        line-height: 2;
+    }
+    .submits i {
+        display: inline;
+    }
+}
+
+/* Extra large devices (large desktops) */
+
+/* No media query since the extra-large breakpoint has no upper bound on its width */
