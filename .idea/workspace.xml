@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfffdf82-98b8-4348-8a8e-ebd2bb2b6686" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nabard/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/nabard/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nabard/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/nabard/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nabard/templates/team_register.html" beforeDir="false" afterPath="$PROJECT_DIR$/nabard/templates/team_register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nabard_app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/nabard_app/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,11 +15,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="196">
               <caret line="145" column="5" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nabard_app/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
@@ -71,6 +75,7 @@
       <find>&lt;h2&gt;تیم اجرایی&lt;/h2&gt;</find>
       <find>&lt;section id=&quot;staff&quot;&gt;</find>
       <find>jump-to-top</find>
+      <find>de</find>
     </findStrings>
     <replaceStrings>
       <replace>{% static 'img/\w* %}</replace>
@@ -91,12 +96,12 @@
         <option value="$PROJECT_DIR$/nabard/forms.py" />
         <option value="$PROJECT_DIR$/nabard/views.py" />
         <option value="$PROJECT_DIR$/nabard/validators.py" />
-        <option value="$PROJECT_DIR$/nabard_app/settings.py" />
         <option value="$PROJECT_DIR$/nabard/static/css/form.css" />
         <option value="$PROJECT_DIR$/Front-End/Nabard/index.html" />
         <option value="$PROJECT_DIR$/nabard/templates/index.html" />
         <option value="$PROJECT_DIR$/nabard/templates/team_register.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/nabard_app/settings.py" />
       </list>
     </option>
   </component>
@@ -121,6 +126,16 @@
             <path>
               <item name="nabard_app" type="b2602c69:ProjectViewProjectNode" />
               <item name="nabard_app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nabard_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nabard_app" type="462c0819:PsiDirectoryNode" />
+              <item name="nabard_app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nabard_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nabard_app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -231,12 +246,12 @@
       <workItem from="1562001249199" duration="3918000" />
       <workItem from="1562007528053" duration="1220000" />
       <workItem from="1562021158050" duration="28000" />
-      <workItem from="1562062359397" duration="10590000" />
+      <workItem from="1562062359397" duration="10936000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49675000" />
+    <option name="totallyTimeSpent" value="50021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="34" y="36" width="1336" height="736" extended-state="6" />
@@ -247,7 +262,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.43238732" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43238732" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.61936563" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -256,7 +271,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3739566" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3739566" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -434,13 +449,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nabard_app/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Front-End/Nabard/form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -554,6 +562,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="145" column="5" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nabard_app/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
