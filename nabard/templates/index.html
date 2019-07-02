@@ -8,6 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
+	<link rel="SHORTCUT ICON" href="{% static 'img/Emblem.jpg' %}">
 	<script src="https://kit.fontawesome.com/05c23298b2.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -21,12 +22,12 @@
 		<i class="fa fa-bars" style="color: bisque"></i>
 	</a>
 	<a href="#header" id="nav-brand" class="active">مسابقه نبرد اپلیکیشن ها</a>
-	<a href="#contact-us">ارتباط با ما</a>
-	<a href="#sponsors">حامیان</a>
-	<a href="#timetable">زمان بندی و ثبت نام</a>
-	<a href="#summary">توضیحات مسابقه</a>
-	<a href="#staff">کمیته علمی و اجرایی</a>
 	<a href="#section-info">معرفی</a>
+	<a href="#staff">کمیته علمی و اجرایی</a>
+	<a href="#summary">توضیحات مسابقه</a>
+	<a href="#timetable">زمان بندی و ثبت نام</a>
+	<a href="#sponsors">حامیان</a>
+	<a href="#contact">ارتباط با ما</a>
 </nav>
 <div class="clear-fix"></div>
 
@@ -36,19 +37,12 @@
 		<div class="row">
 			<img src="{% static 'img/nabardlogo.png' %}" alt="مسابقه نبرد اپلیکیشن ها">
 			<h1 class="heading-1">دومین دوره از مسابقات نبرد اپلیکیشن ها</h1>
-			<!-- <span class="underline"></span>
-            <p class="heading-p">
-                برای دریافت اطلاعات مسابقه به لینک زیر مراجعه کنید
-            </p> -->
 			<a href="#section-info" id="heading-link"><i class="fas fa-arrow-circle-down"></i></a>
 		</div>
 	</div>
 </header>
 
 <!-- Information -->
-<div id="jump-to-top">
-	<a href="#header"><i class="fa fa-angle-up" style="font-size:30px;color: white"></i></a>
-</div>
 <section id="section-info">
 	<div class="container" style="text-align: center;">
 		<h2>درباره مسابقه</h2>
@@ -237,7 +231,9 @@
 					<p>مسئول امور اجرایی</p>
 				</div>
 				<div class="master-item">
-					<img src="{% static 'img/photos/Moalemi.jpg' %}" alt="">
+					<a href="https://www.linkedin.com/in/mmoallemi99">
+						<img src="{% static 'img/photos/Moalemi.jpg' %}" alt="">
+					</a>
 					<h3>محمد معلمی</h3>
 					<p>مسئول امور اجرایی</p>
 				</div>
@@ -398,7 +394,10 @@
 <footer id="contact-us">
 	<div class="container">
 		<p>
-			Copyright &copy; 2019 - <a href="http://rezapazan.cvbuilder.me">Reza Pazan</a>
+			Copyright &copy; 2019 -
+			<a href="http://rezapazan.cvbuilder.me">Reza Pazan</a>
+			&amp;
+			<a href="https://www.linkedin.com/in/mmoallemi99">Mohammad Moallemi</a>
 		</p>
 	</div>
 </footer>

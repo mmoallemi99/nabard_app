@@ -26,7 +26,7 @@ def team_register(request):
             for member in new_members:
                 member.team = new_team
                 member.save()
-            return HttpResponse('good to go')
+            return render(request, 'register_success.html', {})
     else:
         team_form = TeamRegistrationForm()
         members_formset = MembersFormSet()

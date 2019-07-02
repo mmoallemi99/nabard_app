@@ -23,11 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'w@6-!+=y&v_-ij8z1ex=r1o%^a0h)au0ew4yrplllqk0^8p9$l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = False
-DEBUG = True
+DEBUG = False
+# DEBUG = True
 
-ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ['94.184.89.123']
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['94.184.89.123']
 
 
 # Application definition
@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'nabard.apps.NabardConfig'
+    'nabard.apps.NabardConfig',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
@@ -130,6 +131,8 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
 
+PHONENUMBER_DB_FORMAT = 'NATIONAL'
+PHONENUMBER_DEFAULT_REGION = 'IR'
 
 # Production Settings
 SECURE_BROWSER_XSS_FILTER = True
@@ -137,3 +140,4 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 X_FRAME_OPTIONS = 'DENY'
+

@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://kit.fontawesome.com/05c23298b2.js"></script>
+	<link rel="stylesheet" href="{% static 'css/form.css' %}">
+	<title>فرم ثبت نام</title>
+	<style>
+		body {
+			background: url("{% static 'img/memphis-mini-bg.png' %}") repeat !important;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<h2 style="margin-top: 25%;">اطلاعات شما با موفقیت ارسال شد.</h2>
+		<span class="underline"></span>
+		<br>
+		<p><a href="{% url 'nabard:index' %}">صفحه اصلی</a></p>
+	</div>
+</div>
+<footer style="position: absolute; bottom: 0; width: 100%;">
+	<div class="container">
+		<p>
+			Copyright &copy; 2019 -
+			<a href="http://rezapazan.cvbuilder.me">Reza Pazan</a>
+			&amp;
+			<a href="https://www.linkedin.com/in/mmoallemi99">Mohammad Moallemi</a>
+		</p>
+	</div>
+</footer>
+</body>
+</html>

@@ -80,13 +80,6 @@ nav a {
 
 /* Header */
 
-#jump-to-top {
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    display: none;
-}
-
 header {
     width: 100%;
     max-height: 100vh;
@@ -559,68 +552,46 @@ footer a {
 
 /* Large devices (desktops, less than 1200px) */
 
-@media (max-width: 1199.98px) {}
-
-/* Medium devices (tablets, less than 992px) */
-
-@media (max-width: 991.98px) {}
-
-/* Small devices (landscape phones, less than 768px) */
-
-@media (max-width: 767.98px) {}
-
-/* Extra small devices (portrait phones, less than 576px) */
-
-@media (max-width: 575.98px) {
+@media (max-width: 1199.98px) {
     /* Navbar */
     .navbar a:not(:nth-child(2)) {
         display: none;
     }
     .navbar {
-        position: relative;
+        position: fixed;
     }
     .navbar a.icon {
         float: left;
         display: block;
     }
     .navbar.responsive {
-        position: relative;
+        position: fixed;
     }
     #nav-brand {
         position: absolute;
         display: block;
         float: right;
-        margin-right: 5px;
+        margin: 0 !important;
+        margin-top: 10px !important;
+        margin-right: 10px !important;
+        padding: 0 !important;
         right: 0;
-        font-size: large;
+        font-size: 25px !important;
         top: 0;
-        width: 100px;
         font-size: 1rem;
         text-align: right;
     }
     .navbar.responsive a.icon {
         position: absolute;
-        width: 15%;
-        left: 0;
-        top: 0;
     }
-    .navbar.responsive a {
-        margin-bottom: 6px;
+    .navbar.responsive a:not(:first-child) {
+        margin-top: 20px;
         float: none;
         display: block;
         text-align: right;
     }
-    .navbar.responsive a:not(:nth-child(2)):hover {
-        background-color: #4f7f96
-    }
-    #jump-to-top {
-        position: fixed;
-        bottom: 20px;
-        right: 10px;
-        background-color: #e2005a;
-        display: block;
-        text-align: center;
-        transition: all 0.5s;
+    .navbar.responsive a:nth-child(3) {
+        margin-top: 40px;
     }
     /* Header */
     header {
@@ -632,11 +603,12 @@ footer a {
         padding-top: 50px;
     }
     header img {
-        width: 230px;
-        height: 200px;
+        margin-top: 50px;
+        width: 630px;
+        height: 600px;
     }
     header h1 {
-        font-size: 27px;
+        font-size: 50px;
         margin-top: 20px;
     }
     header #heading-link {
@@ -665,7 +637,7 @@ footer a {
     }
     /* Summary */
     section#summary .row {
-        padding: 50px 0;
+        padding: 70px 0;
     }
     section#summary h2 {
         font-size: 30px;
@@ -731,6 +703,565 @@ footer a {
     /* Contact */
     section#contact .row {
         padding: 50px;
+        padding-top: 80px;
+    }
+    section#contact h2 {
+        font-size: 20px;
+    }
+    section#contact .contact-items ul {
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    section#contact .contact-items ul li {
+        margin-top: 40px;
+    }
+    section#contact ul p {
+        margin-top: 0;
+    }
+    section#contact ul i {
+        padding-bottom: 10px;
+    }
+    /* footer */
+    footer {
+        padding: 30px 0;
+    }
+    /*staff*/
+    section#staff h2 {
+        font-size: 30px;
+        margin-top: 0;
+    }
+    section#staff .masters .master-item {
+        flex-basis: 50%;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+
+@media (max-width: 991.98px) {
+    /* Navbar */
+    .navbar a:not(:nth-child(2)) {
+        display: none;
+    }
+    .navbar {
+        position: fixed;
+    }
+    .navbar a.icon {
+        float: left;
+        display: block;
+    }
+    .navbar.responsive {
+        position: fixed;
+    }
+    #nav-brand {
+        position: absolute;
+        display: block;
+        float: right;
+        margin: 0 !important;
+        margin-top: 10px !important;
+        margin-right: 10px !important;
+        padding: 0 !important;
+        right: 0;
+        font-size: 25px !important;
+        top: 0;
+        font-size: 1rem;
+        text-align: right;
+    }
+    .navbar.responsive a.icon {
+        position: absolute;
+    }
+    .navbar.responsive a:not(:first-child) {
+        margin-top: 20px;
+        float: none;
+        display: block;
+        text-align: right;
+    }
+    .navbar.responsive a:nth-child(3) {
+        margin-top: 40px;
+    }
+    /* Header */
+    header {
+        min-height: 100vh;
+        background-attachment: fixed;
+    }
+    header .row {
+        padding: 0;
+        padding-top: 50px;
+    }
+    header img {
+        margin-top: 50px;
+        width: 630px;
+        height: 600px;
+    }
+    header h1 {
+        font-size: 50px;
+        margin-top: 20px;
+    }
+    header #heading-link {
+        display: none;
+        font-size: 50px;
+        margin-top: 10px;
+    }
+    /* Info */
+    section#section-info {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+    section#section-info h2 {
+        font-size: 30px;
+    }
+    section#section-info .row {
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+    section#section-info p {
+        font-size: 20px;
+        margin-top: 0;
+    }
+    section#section-info .info-image img {
+        width: 100%;
+    }
+    /* Summary */
+    section#summary .row {
+        padding: 70px 0;
+    }
+    section#summary h2 {
+        font-size: 30px;
+    }
+    section#summary p {
+        padding: 0;
+        font-size: 20px;
+    }
+    section#summary .table-content {
+        font-size: 13px;
+        margin-top: 20px;
+    }
+    section#summary table {
+        font-size: 15px;
+    }
+    section#summary table td, th {
+        padding: 15px;
+    }
+    section#summary table a {
+        font-size: .7rem;
+        padding: 1rem 2rem;
+        margin-top: 10px;
+        margin-left: 0;
+        margin-right: 0 !important;
+        border-radius: 50px;
+    }
+    /* timetable */
+    section#timetable h2 {
+        font-size: 30px;
+    }
+    section#timetable table {
+        font-size: 15px;
+    }
+    section#timetable table td {
+        padding: 5px;
+    }
+    section#timetable table th {
+        padding: 5px;
+    }
+    section#timetable .workshops h2 {
+        font-size: 30px;
+    }
+    section#timetable a {
+        padding: 1.25rem 2.25rem;
+        margin-left: 0;
+        margin-right: 0 !important;
+    }
+    /* Sponsors */
+    section#sponsors {
+        padding: 70px 0;
+    }
+    section#sponsors h2 {
+        margin: 0;
+    }
+    section#sponsors .container .sponsors-items {
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+    section#sponsors .container .sponsors-items .item {
+        margin-top: 50px;
+        padding: 20px;
+    }
+    /* Contact */
+    section#contact .row {
+        padding: 50px;
+        padding-top: 80px;
+    }
+    section#contact h2 {
+        font-size: 20px;
+    }
+    section#contact .contact-items ul {
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    section#contact .contact-items ul li {
+        margin-top: 40px;
+    }
+    section#contact ul p {
+        margin-top: 0;
+    }
+    section#contact ul i {
+        padding-bottom: 10px;
+    }
+    /* footer */
+    footer {
+        padding: 30px 0;
+    }
+    /*staff*/
+    section#staff h2 {
+        font-size: 30px;
+        margin-top: 0;
+    }
+    section#staff .masters .master-item {
+        flex-basis: 50%;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+
+@media (max-width: 767.98px) {
+    /* Navbar */
+    .navbar a:not(:nth-child(2)) {
+        display: none;
+    }
+    .navbar {
+        position: fixed;
+    }
+    .navbar a.icon {
+        float: left;
+        display: block;
+    }
+    .navbar.responsive {
+        position: fixed;
+    }
+    #nav-brand {
+        position: absolute;
+        display: block;
+        float: right;
+        margin: 0 !important;
+        margin-top: 20px !important;
+        margin-right: 10px !important;
+        padding: 0 !important;
+        right: 0;
+        font-size: 15px !important;
+        top: 0;
+        font-size: 1rem;
+        text-align: right;
+    }
+    .navbar.responsive a.icon {
+        position: absolute;
+    }
+    .navbar.responsive a:not(:first-child) {
+        margin-top: 20px;
+        float: none;
+        display: block;
+        text-align: right;
+    }
+    .navbar.responsive a:nth-child(3) {
+        margin-top: 40px;
+    }
+    /* Header */
+    header {
+        min-height: 100vh;
+        background-attachment: fixed;
+    }
+    header .row {
+        padding: 0;
+        padding-top: 50px;
+    }
+    header img {
+        margin-top: 50px;
+        width: 230px;
+        height: 200px;
+    }
+    header h1 {
+        font-size: 27px;
+        margin-top: 20px;
+    }
+    header #heading-link {
+        display: none;
+        font-size: 50px;
+        margin-top: 10px;
+    }
+    /* Info */
+    section#section-info {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+    section#section-info h2 {
+        font-size: 30px;
+    }
+    section#section-info .row {
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+    section#section-info p {
+        font-size: 20px;
+        margin-top: 0;
+    }
+    section#section-info .info-image img {
+        width: 100%;
+    }
+    /* Summary */
+    section#summary .row {
+        padding: 70px 0;
+    }
+    section#summary h2 {
+        font-size: 30px;
+    }
+    section#summary p {
+        padding: 0;
+        font-size: 20px;
+    }
+    section#summary .table-content {
+        font-size: 13px;
+        margin-top: 20px;
+    }
+    section#summary table {
+        font-size: 15px;
+    }
+    section#summary table td, th {
+        padding: 15px;
+    }
+    section#summary table a {
+        font-size: .7rem;
+        padding: 1rem 2rem;
+        margin-top: 10px;
+        margin-left: 0;
+        margin-right: 0 !important;
+        border-radius: 50px;
+    }
+    /* timetable */
+    section#timetable h2 {
+        font-size: 30px;
+    }
+    section#timetable table {
+        font-size: 15px;
+    }
+    section#timetable table td {
+        padding: 5px;
+    }
+    section#timetable table th {
+        padding: 5px;
+    }
+    section#timetable .workshops h2 {
+        font-size: 30px;
+    }
+    section#timetable a {
+        padding: 1.25rem 2.25rem;
+        margin-left: 0;
+        margin-right: 0 !important;
+    }
+    /* Sponsors */
+    section#sponsors {
+        padding: 70px 0;
+    }
+    section#sponsors h2 {
+        margin: 0;
+    }
+    section#sponsors .container .sponsors-items {
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+    section#sponsors .container .sponsors-items .item {
+        margin-top: 50px;
+        padding: 20px;
+    }
+    /* Contact */
+    section#contact .row {
+        padding: 50px;
+        padding-top: 80px;
+    }
+    section#contact h2 {
+        font-size: 20px;
+    }
+    section#contact .contact-items ul {
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    section#contact .contact-items ul li {
+        margin-top: 40px;
+    }
+    section#contact ul p {
+        margin-top: 0;
+    }
+    section#contact ul i {
+        padding-bottom: 10px;
+    }
+    /* footer */
+    footer {
+        padding: 30px 0;
+    }
+    /*staff*/
+    section#staff h2 {
+        font-size: 30px;
+        margin-top: 0;
+    }
+    section#staff .masters .master-item {
+        flex-basis: 50%;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+
+@media (max-width: 575.98px) {
+    /* Navbar */
+    .navbar a:not(:nth-child(2)) {
+        display: none;
+    }
+    .navbar {
+        position: fixed;
+    }
+    .navbar a.icon {
+        float: left;
+        display: block;
+    }
+    .navbar.responsive {
+        position: fixed;
+    }
+    #nav-brand {
+        position: absolute;
+        display: block;
+        float: right;
+        margin: 0 !important;
+        margin-top: 20px !important;
+        margin-right: 10px !important;
+        padding: 0 !important;
+        right: 0;
+        font-size: 15px !important;
+        top: 0;
+        font-size: 1rem;
+        text-align: right;
+    }
+    .navbar.responsive a.icon {
+        position: absolute;
+    }
+    .navbar.responsive a:not(:first-child) {
+        margin-top: 20px;
+        float: none;
+        display: block;
+        text-align: right;
+    }
+    .navbar.responsive a:nth-child(3) {
+        margin-top: 40px;
+    }
+    /* Header */
+    header {
+        min-height: 100vh;
+        background-attachment: fixed;
+    }
+    header .row {
+        padding: 0;
+        padding-top: 50px;
+    }
+    header img {
+        margin-top: 50px;
+        width: 230px;
+        height: 200px;
+    }
+    header h1 {
+        font-size: 27px;
+        margin-top: 20px;
+    }
+    header #heading-link {
+        display: none;
+        font-size: 50px;
+        margin-top: 10px;
+    }
+    /* Info */
+    section#section-info {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+    section#section-info h2 {
+        font-size: 30px;
+    }
+    section#section-info .row {
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+    section#section-info p {
+        font-size: 20px;
+        margin-top: 0;
+    }
+    section#section-info .info-image img {
+        width: 100%;
+    }
+    /* Summary */
+    section#summary .row {
+        padding: 70px 0;
+    }
+    section#summary h2 {
+        font-size: 30px;
+    }
+    section#summary p {
+        padding: 0;
+        font-size: 20px;
+    }
+    section#summary .table-content {
+        font-size: 13px;
+        margin-top: 20px;
+    }
+    section#summary table {
+        font-size: 15px;
+    }
+    section#summary table td, th {
+        padding: 15px;
+    }
+    section#summary table a {
+        font-size: .7rem;
+        padding: 1rem 2rem;
+        margin-top: 10px;
+        margin-left: 0;
+        margin-right: 0 !important;
+        border-radius: 50px;
+    }
+    /* timetable */
+    section#timetable h2 {
+        font-size: 30px;
+    }
+    section#timetable table {
+        font-size: 15px;
+    }
+    section#timetable table td {
+        padding: 5px;
+    }
+    section#timetable table th {
+        padding: 5px;
+    }
+    section#timetable .workshops h2 {
+        font-size: 30px;
+    }
+    section#timetable a {
+        padding: 1.25rem 2.25rem;
+        margin-left: 0;
+        margin-right: 0 !important;
+    }
+    /* Sponsors */
+    section#sponsors {
+        padding: 70px 0;
+    }
+    section#sponsors h2 {
+        margin: 0;
+    }
+    section#sponsors .container .sponsors-items {
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+    section#sponsors .container .sponsors-items .item {
+        margin-top: 50px;
+        padding: 20px;
+    }
+    /* Contact */
+    section#contact .row {
+        padding: 50px;
+        padding-top: 80px;
     }
     section#contact h2 {
         font-size: 20px;

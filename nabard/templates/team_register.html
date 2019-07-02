@@ -26,10 +26,22 @@
 				{{ form.full_name.errors }}
 			</div>
 		{% endfor %}
+
 		<div class="form-group">
 			<label for="{{ team_form.app_title.id_for_label }}" dir="rtl">عنوان طرح :</label>
 			{{ team_form.app_title }}
 			{{ team_form.app_title.errors }}
+		</div>
+
+		<div class="form-group">
+			<label for="{{ team_form.email.id_for_label }}" dir="rtl">ایمیل :</label>
+			{{ team_form.email }}
+			{{ team_form.email.errors }}
+		</div>
+		<div class="form-group">
+			<label for="{{ team_form.phone_number.id_for_label }}" dir="rtl">شماره موبایل :</label>
+			{{ team_form.phone_number }}
+			{{ team_form.phone_number.errors }}
 		</div>
 
 		{% csrf_token %}
@@ -64,7 +76,10 @@
 <footer id="contact-us">
 	<div class="container">
 		<p>
-			Copyright &copy; 2019 - <a href="http://rezapazan.cvbuilder.me">Reza Pazan</a>
+			Copyright &copy; 2019 -
+			<a href="http://rezapazan.cvbuilder.me">Reza Pazan</a>
+			&amp;
+			<a href="https://www.linkedin.com/in/mmoallemi99">Mohammad Moallemi</a>
 		</p>
 	</div>
 </footer>
