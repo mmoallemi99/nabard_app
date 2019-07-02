@@ -34,6 +34,7 @@
 
 		{% csrf_token %}
 		<div class="submits">
+			<input type="submit" value="ارسال">
 			<label for="{{ team_form.app_file.id_for_label }}" dir="rtl">
 				فایل اپلیکیشن خود را در قالب zip پیوست کنید:
 				<i class="fas fa-file-upload"></i>
@@ -48,17 +49,21 @@
 			{{ team_form.powerpoint_file }}
 			{{ team_form.powerpoint_file.errors }}
 		</div>
-		<div class="submits">
-			<input type="submit" value="ارسال">
-		</div>
 	</form>
-	<p dir="rtl" style="margin-top:40px;">*جهت ارسال فایل های خود روی دکمه های آبی رنگ به شکل فایل کلیک کنید*
-	</p>
+	<h1>: توجه</h1>
+	<p dir="rtl" style="margin-top:20px;">جهت ارسال فایل های خود روی دکمه های آبی رنگ به شکل فایل کلیک کنید.</p>
 	<p id="notification" dir="rtl">
 		اپلیکیشن های ارسال شده توسط کمیته علمی ارزیابی خواهد شد و تیم های برتر برای ثبت نام و ارائه حضوری در روز
 		مسابقه دعوت
 		خواهند شد.
 	</p>
 </div>
+<footer id="contact-us">
+	<div class="container">
+		<p>
+			Copyright &copy; 2019 - <a href="http://rezapazan.cvbuilder.me">Reza Pazan</a>
+		</p>
+	</div>
+</footer>
 </body>
 </html>

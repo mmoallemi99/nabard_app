@@ -16,17 +16,6 @@
 
     <body>
         <script>
-            // var prevScrollpos = window.pageYOffset;
-            // window.onscroll = function () {
-            //     var currentScrollPos = window.pageYOffset;
-            //     if (currentScrollPos > prevScrollpos + 100) {
-            //         document.getElementById("navbar").style.backgroundColor = "rgb(15, 102, 233)";
-            //     }
-            //     else {
-            //         document.getElementById("navbar").style.backgroundColor = "rgba(255, 255, 255,0)";
-            //     }
-            // }
-
             $(document).ready(function () {
                 $("a").on('click', function (event) {
                     if (this.hash !== "") {
@@ -44,49 +33,18 @@
         </script>
 
         <!-- Navbar -->
-        <nav class="navigation">
-            <div id="menuToggle">
-                <!--
-            A fake / hidden checkbox is used as click reciever,
-            so you can use the :checked selector on it.
-            -->
-                <input type="checkbox" />
-
-                <!--
-            Some spans to act as a hamburger.
-            
-            They are acting like a real hamburger,
-            not that McDonalds stuff.
-            -->
-                <span style="margin-top: 9px;"></span>
-                <span></span>
-                <span></span>
-
-                <!--
-            Too bad the menu has to be inside of the button
-            but hey, it's pure CSS magic.
-            -->
-                <ul id="menu">
-                    <li><a href="#contact-us">ارتباط با ما</a></li>
-                    <li><a href="#download">حامیان</a></li>
-                    <li><a href="#timetable">زمان بندی و ثبت نام</a></li>
-                    <li><a href="#summary">توضیحات مسابقه</a></li>
-                    <li><a href="#services">کمیته علمی و اجرایی</a></li>
-                    <li><a href="#section-info">معرفی</a></li>
-                </ul>
-            </div>
-        </nav>
         <nav id="navbar">
             <div class="container">
-                <a href="#header" id="nav-brand">مسابقه نبرد اپلیکیشن ها</a>
+                <!-- <a href="#header" id="nav-brand">مسابقه نبرد اپلیکیشن ها</a> -->
                 <button><i class="fas fa-bars"></i></button>
                 <ul>
                     <li><a href="#contact-us">ارتباط با ما</a></li>
-                    <li><a href="#download">حامیان</a></li>
+                    <li><a href="#sponsors">حامیان</a></li>
                     <li><a href="#timetable">زمان بندی و ثبت نام</a></li>
                     <li><a href="#summary">توضیحات مسابقه</a></li>
                     <li><a href="#services">کمیته علمی و اجرایی</a></li>
                     <li><a href="#section-info">معرفی</a></li>
+	                <li><a href="#header" id="nav-brand">مسابقه نبرد اپلیکیشن ها</a></li>
                 </ul>
             </div>
         </nav>
@@ -113,7 +71,6 @@
                 <h2>درباره مسابقه</h2>
                 <span class="underline" style="margin-top: 0;"></span>
                 <div class="row">
-                    <img src="img/poster.jpg" alt="نبرد اپلیکیشن ها">
                     <!-- <span class="underline"></span> -->
                     <p id="info-p" dir="rtl">
                         دانشکده مهندسی کامپیوتر دانشگاه اصفهان، میزبان برگزاری دومین دوره از مسابقات ملی نبرد اپلیکیشن
@@ -138,10 +95,12 @@
                         سازی و تکنولوژی های استفاده شده امتیاز داده می شود.
                     </p>
                     <!-- <a href="#" id="info-link">GET STARTED!</a> -->
+	                <div class="info-image">
+                        <img src="{% static 'img/poster.jpg' %}" alt="نبرد اپلیکیشن ها">
+                    </div>
                 </div>
             </div>
         </section>
-        <div class="clear-fix"></div>
 
         <!-- staff -->
         <section id="services">
@@ -364,12 +323,12 @@
         </section>
 
         <!-- Sponsers -->
-        <section id="download">
+        <section id="sponsors">
             <div class="container">
                 <div class="row">
                     <h2>حامیان مسابقه</h2>
                     <!-- <a href="#" id="download-link">Download Now!</a> -->
-                    <div class="download-items">
+                    <div class="sponsors-items">
                         <div class="item">
                             <a href="http://comp.ui.ac.ir/"><img src="{% static 'img/uni.png' %}" alt=""></a>
                             <p>دانشکده مهندسی کامپیوتر</p>
@@ -391,30 +350,34 @@
         <section id="contact">
             <div class="container">
                 <div class="row">
-                    <h2>راه های ارتباط با ما</h2>
-                    <span class="underline"></span>
-                    <!-- <p>
-                        Ready to start your next project with us? Give us a call or send us an email and we will get
-                        back to you as soon as possible!
-                    </p> -->
-                    <ul>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <p>031-37934521<br>031-37935641</p>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <p>kaedi@eng.ui.ac.ir<br>sh.rahimi@eng.ui.ac.ir</p>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marked-alt"></i>
-                            <p>اصفهان، میدان آزادی، خیابان دانشگاه، دانشکده مهندسی کامپیوتر</p>
-                        </li>
-                        <li>
-                            <i class="fab fa-telegram" style="padding-bottom: 20px"></i>
-                            <p>@shekoufehrahimi</p>
-                        </li>
-                    </ul>
+                                        <div class="title">
+                        <h2>راه های ارتباط با ما</h2>
+                        <span class="underline"></span>
+                    </div>
+                    <div class="contact-items">
+                        <ul>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <p>031-37934521<br>031-37935641</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <p>kaedi@eng.ui.ac.ir<br>sh.rahimi@eng.ui.ac.ir</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marked-alt"></i>
+                                <p>اصفهان، میدان آزادی، خیابان
+                                    دانشگاه،
+                                    دانشکده
+                                    مهندسی کامپیوتر
+                                </p>
+                            </li>
+                            <li>
+                                <i class="fab fa-telegram" style="padding-bottom: 20px"></i>
+                                <p>@shekoufehrahimi</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -428,15 +391,14 @@
             </div>
         </footer>
         <script>
-            let btn_menu = document.querySelector('.fa-bars')
-            let menu = document.querySelector('nav ul')
-            btn_menu.addEventListener('click', () => {
-                if (menu.style.display === "block") {
-                    menu.style.display = "none";
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
                 } else {
-                    menu.style.display = "block";
+                    x.className = "topnav";
                 }
-            })
+            }
         </script>
     </body>
 
