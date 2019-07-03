@@ -144,4 +144,5 @@ Front-End
 .idea/workspace.xml
 /.idea/
 media
+static
 nabard/migrations

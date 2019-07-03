@@ -8,7 +8,11 @@ from .validators import validate_powerpoint_file,\
 
 class Team(models.Model):
     app_title = models.CharField(max_length=50, verbose_name='عنوان طرح')
-    phone_number = modelfields.PhoneNumberField(verbose_name='شماره موبایل')
+    phone_number = modelfields.PhoneNumberField(error_messages={
+                                                    'invalid': 'شماره موبایل صحیح نیست'
+                                                               '\nلطفا به فرمت 0913******* وارد کنید'
+                                                 },
+                                                verbose_name='شماره موبایل')
     email = models.EmailField(verbose_name='ایمیل')
     app_file = models.FileField(upload_to='apps/%Y/%m', verbose_name='فایل اپلیکیشن',
                                 validators=[validate_archived_file])

@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,9 +9,25 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<script src="https://kit.fontawesome.com/05c23298b2.js"></script>
 	<link rel="stylesheet" href="{% static 'css/form.css' %}">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function () {
+            let file_div_0 = $('.file-div-0');
+            file_div_0.children('input[type="file"]').change(function (e) {
+                let fileName = e.target.files[0].name;
+                let file_name_p = file_div_0.children(".filename-0");
+                file_name_p.html(fileName + '"فایل انتخاب شده "');
+            });
+            let file_div_1 = $('.file-div-1');
+            file_div_1.children('input[type="file"]').change(function (e) {
+                let fileName = e.target.files[0].name;
+                let file_name_p = file_div_1.children(".filename-1");
+                file_name_p.html(fileName + '"فایل انتخاب شده "');
+            });
+        });
+	</script>
 	<title>فرم ثبت نام</title>
 </head>
-
 <body>
 <div class="container">
 	<div class="row">
@@ -52,17 +69,20 @@
 				فایل ارائه را در قالب pptx پیوست کنید:
 				<i class="fas fa-file-upload"></i>
 			</label>
-			{{ team_form.powerpoint_file }}
-			{{ team_form.powerpoint_file.errors }}
-
+			<div class="file-div-0">
+				{{ team_form.powerpoint_file }}
+				{{ team_form.powerpoint_file.errors }}
+				<p class="filename-0">هیچ فایلی انتخاب نکرده اید.</p>
+			</div>
 			<label for="{{ team_form.app_file.id_for_label }}" dir="rtl">
 				فایل اپلیکیشن خود را در قالب zip پیوست کنید:
 				<i class="fas fa-file-upload"></i>
 			</label>
-			{{ team_form.app_file }}
-			{{ team_form.app_file.errors }}
-
-
+			<div class="file-div-1">
+				{{ team_form.app_file }}
+				{{ team_form.app_file.errors }}
+				<p class="filename-1">هیچ فایلی انتخاب نکرده اید.</p>
+			</div>
 		</div>
 	</form>
 	<h1>: توجه</h1>
