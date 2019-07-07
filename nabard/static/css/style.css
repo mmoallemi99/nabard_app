@@ -734,6 +734,9 @@ footer a {
     section#staff .masters .master-item {
         flex-basis: 50%;
     }
+    section#staff h1 {
+        display: none;
+    }
 }
 
 /* Medium devices (tablets, less than 992px) */
@@ -919,6 +922,9 @@ footer a {
     }
     section#staff .masters .master-item {
         flex-basis: 50%;
+    }
+    section#staff h1 {
+        display: none;
     }
 }
 
@@ -1106,6 +1112,9 @@ footer a {
     section#staff .masters .master-item {
         flex-basis: 50%;
     }
+    section#staff h1 {
+        display: none;
+    }
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
@@ -1288,6 +1297,9 @@ footer a {
     section#staff h2 {
         font-size: 30px;
         margin-top: 0;
+    }
+    section#staff h1 {
+        display: none;
     }
 }
 
