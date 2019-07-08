@@ -35,43 +35,52 @@ nav {
 }
 
 nav #nav-brand {
-    /* box-sizing: border-box; */
     float: right;
     margin-left: 200px;
     margin-right: 130px;
-    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: 'Vazir-Light', Fallback, sans-serif;
     font-size: 1rem;
     font-weight: 700;
     text-decoration: none;
     color: rgba(255, 255, 255);
     padding-bottom: .3125rem;
     cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s;
 }
 
-/* nav button {
-    display: none;
-} */
+nav #nav-brand:hover {
+    border: 1px solid white;
+    color: #0f66e9;
+    background: white;
+}
 
 nav ul {
-    /* display: flex; */
-    /* justify-content: flex-end; */
     list-style: none;
     text-align: left;
-    /* box-sizing: border-box; */
     margin-right: 20px;
 }
 
 nav a {
-    padding: 0 20px;
-    float: right;
-}
-
-nav a {
-    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: 'Vazir-Light', Fallback, sans-serif;
     font-size: 0.9rem;
     font-weight: 700;
     text-decoration: none;
     color: white;
+    padding: 0 20px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    float: right;
+}
+
+nav a:focus {
+    outline: none;
+}
+
+nav a:hover {
+    border: 1px solid white;
+    color: #0f66e9;
+    background: white;
 }
 
 .navbar .icon {
@@ -103,7 +112,7 @@ header img {
 
 header h1 {
     color: white;
-    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: 'Vazir-Light', Fallback, sans-serif;
     font-weight: 700;
     font-size: 3.7rem;
     line-height: 1.2;
@@ -113,23 +122,7 @@ header h1 {
     box-sizing: border-box;
     display: block;
     text-align: center;
-}
-
-header h1::after {
-    box-sizing: border-box;
-}
-
-header h1::before {
-    box-sizing: border-box;
-}
-
-header p {
-    color: rgba(255, 255, 255, 0.75);
-    font-family: 'Merriweather', serif;
-    font-weight: 300!important;
-    font-size: 1.15rem;
-    line-height: 1.5;
-    padding: 0 180px;
+    animation: header-animation 1s;
 }
 
 header #heading-link {
@@ -145,10 +138,20 @@ header #heading-link {
     vertical-align: middle;
     box-sizing: border-box;
     cursor: pointer;
+    transition: all 0.4s;
 }
 
 header #heading-link:hover {
     color: #e2005a;
+}
+
+@keyframes header-animation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Info Section */
@@ -166,7 +169,7 @@ section#section-info .row {
 }
 
 section#section-info h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Vazir-Light', Fallback, sans-serif;
     font-size: 3rem;
     font-weight: 500;
     line-height: 1.2;
@@ -181,8 +184,17 @@ section#section-info .info-image {
     margin-top: 20px;
 }
 
+section#section-info .info-image img {
+    transition: all 0.3s;
+}
+
+section#section-info .info-image img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
 section#section-info p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Vazir-Light', Fallback, sans-serif;
     font-size: 1.35rem;
     font-weight: 400;
     line-height: 1.5;
@@ -197,6 +209,8 @@ section#section-info a {
     display: inline-block;
     text-decoration: none;
     color: #e2005a;
+    transition: all 0.3s;
+    border-radius: 10px;
 }
 
 section#section-info a:hover {
@@ -228,6 +242,11 @@ section#staff .masters .master-item {
 
 section#staff .masters .master-item img {
     border-radius: 50px;
+    transition: all 0.3s;
+}
+
+section#staff .masters .master-item img:hover {
+    transform: scale(1.1);
 }
 
 section#staff .master-staff {
@@ -242,6 +261,11 @@ section#staff .master-staff .master-item {
 
 section#staff .master-staff .master-item img {
     border-radius: 50px;
+    transition: all 0.3s;
+}
+
+section#staff .master-staff .master-item img:hover {
+    transform: scale(1.1);
 }
 
 section#staff .staff {
@@ -257,18 +281,23 @@ section#staff .staff .master-item {
 
 section#staff .staff .master-item img {
     border-radius: 50px;
+    transition: all 0.3s;
+}
+
+section#staff .staff .master-item img:hover {
+    transform: scale(1.1);
 }
 
 section#staff h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Vazir-Light', Fallback, sans-serif;
     font-size: 2.5rem;
     line-height: 1.5;
     font-weight: 500;
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
 section#staff h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Vazir-Light', Fallback, sans-serif;
     font-size: 1.5rem;
     line-height: 1.5;
     font-weight: 500;
@@ -277,14 +306,14 @@ section#staff h1 {
 section#staff .master-item h3 {
     margin-top: 30px;
     margin-bottom: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Vazir-Light', Fallback, sans-serif;
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.2;
 }
 
 section#staff .master-item p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Vazir-Light', Fallback, sans-serif;
     color: black;
     font-size: 1rem;
     font-weight: 400;
@@ -297,7 +326,7 @@ section#staff .master-item p {
 section#summary {
     width: 100%;
     background-color: #052143;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Vazir-Light', Fallback, sans-serif;
     color: white;
     text-align: center;
 }
@@ -347,6 +376,7 @@ section#summary table a {
     line-height: 1.5;
     box-sizing: border-box;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
 section#summary table a:first-child {
@@ -368,7 +398,7 @@ section#timetable {
     background-color: white;
     padding: 90px 0;
     color: black;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Vazir-Light', Fallback, sans-serif;
 }
 
 section#timetable .row {
@@ -381,7 +411,7 @@ section#timetable .row p {
 }
 
 section#timetable table {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Vazir-Light', Fallback, sans-serif;
     width: 100%;
 }
 
@@ -407,7 +437,7 @@ section#timetable a {
     padding: 1.25rem 2.25rem;
     background-color: #0f66e9;
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Vazir-Light', Fallback, sans-serif;
     font-size: 0.85rem;
     font-weight: 700;
     text-decoration: none;
@@ -420,6 +450,7 @@ section#timetable a {
     line-height: 1.5;
     box-sizing: border-box;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
 section#timetable a:nth-child(2) {
@@ -454,7 +485,7 @@ section#sponsors {
 }
 
 section#sponsors p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Vazir-Light', Fallback, sans-serif;
 }
 
 section#sponsors .row {
@@ -462,12 +493,20 @@ section#sponsors .row {
 }
 
 section#sponsors h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Vazir-Light', Fallback, sans-serif;
     font-size: 2rem;
     font-weight: 500;
     line-height: 1.2;
     color: white;
     margin-bottom: 50px;
+}
+
+section#sponsors img {
+    transition: all 0.3s;
+}
+
+section#sponsors img:hover {
+    transform: scale(1.1);
 }
 
 /* contact section */
@@ -492,14 +531,14 @@ section#contact .contact-items ul {
 }
 
 section#contact h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Vazir-Light', Fallback, sans-serif;
     font-size: 2rem;
     line-height: 1.2;
     font-weight: 500;
 }
 
 section#contact p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Vazir-Light', Fallback, sans-serif;
     color: #6c757d;
     font-size: 1rem;
     font-weight: 400;
@@ -515,7 +554,7 @@ section#contact ul {
 section#contact ul p {
     padding: 0;
     margin-top: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Vazir-Light', Fallback, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -524,6 +563,12 @@ section#contact ul p {
 section#contact ul i {
     color: #6c757d;
     font-size: 3rem;
+    transition: all 0.3s;
+}
+
+section#contact ul i:hover {
+    color: #0f66e9;
+    cursor: pointer;
 }
 
 /* footer section */
@@ -535,7 +580,7 @@ footer {
 }
 
 footer p {
-    font-family: 'Merriweather', serif;
+    font-family: 'Vazir-Light', Fallback, sans-serif;
     font-size: 0.8rem;
     font-weight: 400;
     color: #6c757d;
@@ -546,6 +591,22 @@ footer a {
     font-weight: 400;
     color: #6c757d;
     text-decoration: none;
+    transition: all 0.3s;
+}
+
+footer a:hover {
+    cursor: pointer;
+    color: #0f66e9;
+}
+
+@font-face {
+    font-family: 'Vazir-Light';
+    src: url(../Vazir/Vazir-Light.eot);
+    src: url(../Vazir/Vazir-Light.eot) format('embedded-opentype'), /* IE6-IE8 */
+    url(../Vazir/Vazir-Light.woff2) format('woff2'), /* Super Modern Browsers */
+    url(../Vazir/Vazir-Light.woff) format('woff'), /* Pretty Modern Browsers */
+    url(../Vazir/Vazir-Light.ttf) format('truetype');
+    /* Safari, Android, iOS */
 }
 
 /* media queries */
@@ -1147,6 +1208,16 @@ footer a {
         top: 0;
         font-size: 1rem;
         text-align: right;
+    }
+    #nav-brand:hover {
+        color: white !important;
+        background: transparent !important;
+        border: none !important;
+    }
+    .navbar a {
+        color: white !important;
+        background: transparent !important;
+        border: none !important;
     }
     .navbar.responsive a.icon {
         position: absolute;
