@@ -140,9 +140,6 @@ dmypy.json
 
 Front-End
 .idea
-/.idea
-.idea/workspace.xml
-/.idea/
 media
 static
 nabard/migrations
