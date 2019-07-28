@@ -331,6 +331,14 @@ section#summary {
     text-align: center;
 }
 
+section#summary .rewards {
+    margin-top: 9%;
+}
+
+section#summary .rewards p {
+    margin-top: 20px;
+}
+
 section#summary .row {
     width: 100%;
     padding: 90px 0;
