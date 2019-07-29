@@ -23,11 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'w@6-!+=y&v_-ij8z1ex=r1o%^a0h)au0ew4yrplllqk0^8p9$l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = False
-DEBUG = True
-#
-ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ['nabard.comp.ui.ac.ir', '94.184.89.123', '192.168.50.123']
+DEBUG = False
+# DEBUG = True
+
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['nabard.comp.ui.ac.ir', '94.184.89.123', '192.168.50.123']
 
 
 # Application definition
