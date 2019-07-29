@@ -11,6 +11,29 @@ body {
     text-align: right;
 }
 
+a.home {
+    text-decoration: none;
+    background: #0f66e9;
+    color: white;
+    border: 2px solid #0f66e9;
+    border-top: none;
+    border-left: none;
+    padding: 15px 20px;
+    border-radius: 0 0 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+a.home:hover {
+    background: white;
+    color: #0f66e9;
+    border-top: none;
+    border-left: none;
+    transform: scale(1.1);
+}
+
 .container {
     margin: 0 auto;
     width: 80%;
@@ -82,6 +105,11 @@ body {
     font-weight: 700;
     box-sizing: border-box;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.submits i:hover {
+    transform: scale(1.3);
 }
 
 input[type="submit"] {
@@ -95,13 +123,24 @@ input[type="submit"] {
     text-decoration: none;
     border-radius: 10rem;
     word-spacing: 1px;
-    border: none;
+    border: 2px solid #0f66e9;
     text-align: center;
     vertical-align: middle;
     line-height: 1.5;
     box-sizing: border-box;
     cursor: pointer;
     margin: 30px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.1);
+    background-color: white;
+    color: #0f66e9;
+}
+
+input[type="submit"]:focus {
+    outline: none;
 }
 
 input[type='file'] {
@@ -137,6 +176,13 @@ footer a {
     font-weight: 400;
     color: #6c757d;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+footer a:hover {
+    display: inline-block;
+    color: #0f66e9;
+    transform: scale(1.1);
 }
 
 h1 {
@@ -147,19 +193,34 @@ h1 {
 
 /* Large devices (desktops, less than 1200px) */
 
-@media (max-width: 1199.98px) {}
+@media (max-width: 1199.98px) {
+    a.home {
+        display: none;
+    }
+}
 
 /* Medium devices (tablets, less than 992px) */
 
-@media (max-width: 991.98px) {}
+@media (max-width: 991.98px) {
+    a.home {
+        display: none;
+    }
+}
 
 /* Small devices (landscape phones, less than 768px) */
 
-@media (max-width: 767.98px) {}
+@media (max-width: 767.98px) {
+    a.home {
+        display: none;
+    }
+}
 
 /* Extra small devices (portrait phones, less than 576px) */
 
 @media (max-width: 575.98px) {
+    a.home {
+        display: none;
+    }
     body {
         text-align: center;
     }
