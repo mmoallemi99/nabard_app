@@ -1,4 +1,4 @@
-django==2.2
+django==2.2.21
 psycopg2==2.8
 phonenumbers==8.10
 django-phonenumber-field==3.0
